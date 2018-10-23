@@ -290,6 +290,6 @@ componentDidUpdate() {}
 #### 卸载
 
 ```jsx
- //1.组件将要卸载时调用
+//1.组件将要卸载时调用
 componentWillUnmount(){}
 ```
