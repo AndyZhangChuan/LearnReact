@@ -226,6 +226,7 @@ ReactDOM.render(
 > 2. 如果你有些内部数据不在render函数中使用，请不要放在state中。
 
 #### 生命周期
+![avatar](https://image2.imdada.cn/7ff724fc1e3e4211b71cec2e2deeb5b1.jpg)
 
 第一次渲染时相关生命周期函数
 
