@@ -230,13 +230,18 @@ ReactDOM.render(
 
 第一次渲染时相关生命周期函数
 
+#### 初始化
 ```jsx
-constructor() {}
-componentWillMount() {} // 组件将要挂载
-render() {}			        // 渲染
-componentDidMount() {} //  组件已经挂载
+getDefaultProps() // 设置默认的props，也可以用dufaultProps设置组件的默认属性.
+getInitialState() // 在使用es6的class语法时是没有这个钩子函数的，可以直接在constructor中定义this.state。此时可以访问this.props
+componentWillMount() {} // 组件初始化时只调用，以后组件更新不调用，整个生命周期只调用一次，此时可以修改state。
+render() {}			     // react最重要的步骤，创建虚拟dom，进行diff算法，更新dom树都在此进行。此时就不能更改state了。
+componentDidMount() {} //  组件渲染之后调用，只调用一次。
 // 组件将要卸载时调用
-componentWillUnmount() {}
+componentWillUnmount() {} 
+```
+```
+组件将要卸载时调用
 ```
 
 组件更新时
